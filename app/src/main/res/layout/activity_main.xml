@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:background="@color/nearly_white">
+
+    <TextView
+        android:id="@+id/lbl_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/all_notes"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/lbl_amount_notes"
+        android:layout_below="@+id/lbl_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textSize="17sp"
+        android:textAlignment="center"/>
+
+    <ListView
+        android:id="@+id/lv_notes"
+        android:layout_below="@+id/lbl_amount_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="10dp"
+        android:divider="@color/transparent"/>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_circle_button"
+        android:text="@string/add_symbol"
+        android:textSize="30sp" />
+
+</RelativeLayout>

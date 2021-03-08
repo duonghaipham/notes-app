@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Note</string>
+    <string name="all_notes">All notes</string>
+    <string name="delete">Delete</string>
+    <string name="add_symbol">+</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="hint_title">Title here...</string>
+    <string name="title">Title</string>
+    <string name="hint_content">Content here...</string>
+    <string name="content">Content</string>
+    <string name="hint_tags">#tag</string>
+    <string name="tags">Tags</string>
+</resources>

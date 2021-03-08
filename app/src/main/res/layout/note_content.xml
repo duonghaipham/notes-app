@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lbl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_on_top"
+        android:text="Test title"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/lbl_date_modified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lbl_title"
+        android:layout_alignEnd="@+id/lbl_title"
+        android:layout_below="@id/lbl_title"
+        android:background="@drawable/background_on_middle"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:text="Test datetime"/>
+
+    <TextView
+        android:id="@+id/lbl_content"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/lbl_date_modified"
+        android:layout_alignStart="@+id/lbl_title"
+        android:layout_alignEnd="@+id/lbl_title"
+        android:background="@drawable/background_on_bottom"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:text="Test content"/>
+</RelativeLayout>
