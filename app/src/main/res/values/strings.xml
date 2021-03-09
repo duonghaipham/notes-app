@@ -5,10 +5,17 @@
     <string name="add_symbol">+</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
-    <string name="hint_title">Title here...</string>
+    <string name="hint_title">Title here&#8230;</string>
     <string name="title">Title</string>
-    <string name="hint_content">Content here...</string>
+    <string name="hint_content">Content here&#8230;</string>
     <string name="content">Content</string>
     <string name="hint_tags">#tag</string>
     <string name="tags">Tags</string>
+    <string name="last_modified">Last modified: %1$s</string>
+    <string name="new_note">Create a new note</string>
+    <string name="view_edit_note">"View or edit your note"</string>
+    <plurals name="amount_notes">
+        <item quantity="one">1 note</item>
+        <item quantity="other">%1$d notes</item>
+    </plurals>
 </resources>
