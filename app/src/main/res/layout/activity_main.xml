@@ -9,8 +9,10 @@
     android:paddingLeft="10dp"
     android:background="@color/nearly_white">
 
+
     <TextView
         android:id="@+id/lbl_introduction"
+        android:layout_alignParentTop="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/all_notes"
@@ -25,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:textSize="17sp"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <ListView
         android:id="@+id/lv_notes"
@@ -37,14 +39,13 @@
 
     <Button
         android:id="@+id/btn_add"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/background_circle_button"
         android:text="@string/add_symbol"
         android:textSize="30sp" />
-
 </RelativeLayout>

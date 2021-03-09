@@ -25,7 +25,6 @@ import java.util.Vector;
 
 
 public class MainActivity extends AppCompatActivity {
-
     private ListView listNotes;
     private Button btnAdd;
     private TextView lblAmountNotes;
@@ -41,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         editor = sharedPreferences.edit();
 
         loadListNotes();
-        registerForContextMenu(listNotes);
+        registerForContextMenu(listNotes);  // register context menu for list of notes
 
         btnAdd = (Button) findViewById(R.id.btn_add);
         btnAdd.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onContextItemSelected(MenuItem item) {
+    public boolean onContextItemSelected(MenuItem item) {   // delete a note by touch-and-keep and choose delete
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         int position = info.position;
         String currentKey = getKeyByPosition(position);
@@ -85,14 +84,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onResume() {
+    public void onResume() {    // from each note activity, updating list note
         super.onResume();
         loadListNotes();
     }
 
-    private void loadListNotes() {
+    private void loadListNotes() {  // load list of notes whenever initializing or updating
         Map<String, ?> keys = sharedPreferences.getAll();
-        List<Note> notes = new Vector<Note>();
+        List<Note> notes = new Vector<>();
 
         for (int i = 0; i < keys.size(); i++) {
             List<String> wholeNote = getList(getKeyByPosition(i));
@@ -105,12 +104,12 @@ public class MainActivity extends AppCompatActivity {
         listNotes.setAdapter(adapter);
 
         lblAmountNotes = (TextView) findViewById(R.id.lbl_amount_notes);
-        String amountSuffix = (keys.size() <= 1) ? " note" : " notes";
-        lblAmountNotes.setText(String.valueOf(keys.size()) + amountSuffix);
+        //String amountSuffix = (keys.size() <= 1) ? " note" : " notes";
+        lblAmountNotes.setText(getResources().getQuantityString(R.plurals.amount_notes, keys.size(),  keys.size()));
     }
 
-    public static List<String> getList(String key) {
-        List<String> arrayItems = new Vector<String>();
+    public static List<String> getList(String key) {    // convert a 'string note' to a note
+        List<String> arrayItems = new Vector<>();
         String serializedObject = sharedPreferences.getString(key, null);
         if (serializedObject != null) {
             Gson gson = new Gson();

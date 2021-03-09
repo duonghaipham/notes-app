@@ -41,15 +41,14 @@ public class DataAdapter extends BaseAdapter {
         TextView lblDateModified = (TextView) convertView.findViewById(R.id.lbl_date_modified);
         TextView lblContent = (TextView) convertView.findViewById(R.id.lbl_content);
 
-
         String title = notes.get(position).getTitle();
         String content = notes.get(position).getContent();
-        title = (title.length() > 30) ? title.substring(0, 29) + "..." : title;
-        content = (content.length() > 40) ? content.substring(0, 39)  + "..." : content;
+        title = (title.length() > 30) ? title.substring(0, 29) + "..." : title; // just get 30 characters for preview
+        content = (content.length() > 40) ? content.substring(0, 39)  + "..." : content; // just get 40 characters for preview
 
         lblTitle.setText(title);
         lblContent.setText(content);
         lblDateModified.setText(notes.get(position).getDateModified());
-;       return convertView;
+        return convertView;
     }
 }
